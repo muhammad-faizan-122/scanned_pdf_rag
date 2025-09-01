@@ -69,8 +69,8 @@ sudo apt-get install -y tesseract-ocr libgl1-mesa-glx
 ### 2. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
-cd <repository-name>
+git clone https://github.com/muhammad-faizan-122/scanned_pdf_rag.git
+cd scanned_pdf_rag
 ```
 
 ### 3. Set Up a Virtual Environment
