@@ -34,9 +34,7 @@ def main(pdf_dir: str):
         elements = loader.load_and_partition_pdf(full_path)
 
         # Chunk the elements
-        chunks = chunker.chunk_elements(
-            elements, source_metadata=pdf_file
-        )  # Pass filename as metadata
+        chunks = chunker.chunk_elements(elements, source_filename=pdf_file)
         log.info(f"Created {len(chunks)} chunks from {pdf_file}")
         all_chunks.extend(chunks)
 
@@ -54,7 +52,6 @@ def main(pdf_dir: str):
 
 
 if __name__ == "__main__":
-    # Example usage: python scripts/ingest_data.py data/documents/
     if len(sys.argv) != 2:
         log.warning("Usage: python ingest_data.py <path_to_pdf_directory>")
         sys.exit(1)

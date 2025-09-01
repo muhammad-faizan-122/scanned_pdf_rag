@@ -17,8 +17,8 @@ def create_vector_store(chunks: List[str]):
         f"Creating vector store with {len(chunks)} chunks using {settings.EMBEDDING_MODEL_NAME} embeddings Model."
     )
     embedding_function = get_embedding_function()
-    vector_store = Chroma.from_texts(
-        texts=chunks,
+    vector_store = Chroma.from_documents(
+        documents=chunks,
         embedding=embedding_function,
         persist_directory=settings.DB_PERSIST_DIR,
     )
