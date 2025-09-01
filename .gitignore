@@ -1,0 +1,27 @@
+# ignore log files
+*.log
+
+# ignore Python cache files
+*__pycache__/
+
+# ignore json file
+*.json
+
+# ignore env files
+.env
+
+# ignore directory contains test file for debugging
+test_data/
+
+# todo file
+TODO
+
+# ignore database files
+data/chroma_db/
+
+# ignore images extracted from pdfs
+data/images/ 
+
+# ignore jupyter notebook 
+*.ipynb
+

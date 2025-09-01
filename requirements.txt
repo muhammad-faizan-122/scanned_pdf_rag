@@ -1,0 +1,8 @@
+unstructured[local-inference]
+PyPDF2
+langchain-huggingface
+langchain-community
+chromadb
+langchain-google-genai
+python-dotenv
+tiktoken

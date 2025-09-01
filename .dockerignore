@@ -1,0 +1,49 @@
+# --- Build artifacts and instructions ---
+# Ignore the Dockerfile itself and the .dockerignore file
+Dockerfile
+.dockerignore
+
+# --- Git and version control ---
+# Ignore the entire .git directory and the .gitignore file
+.git
+.gitignore
+
+# --- Python virtual environment ---
+# Never copy the local virtual environment into the image.
+# The Dockerfile creates its own isolated environment.
+venv/
+.venv/
+env/
+*.egg-info/
+
+# --- Sensitive Information ---
+# Never bake secrets into the image. Pass them at runtime.
+# The wildcard handles .env, .env.local, .env.production, etc.
+.env*
+
+# --- Runtime Data and Databases ---
+# This is the most important one for build speed and image size.
+# This data should be mounted as a volume at runtime, not copied into the image.
+data/
+
+# --- Logs ---
+# Logs are runtime artifacts and should not be in the image.
+logs/
+
+# --- Development and Testing Artifacts ---
+# Python cache files
+__pycache__/
+*.pyc
+
+# IDE and editor configuration files
+.vscode/
+.idea/
+
+# Jupyter notebooks and test data
+*.ipynb
+test_data/
+
+# --- Documentation and Project Management ---
+# These are for developers, not the running application.
+README.md
+TODO
