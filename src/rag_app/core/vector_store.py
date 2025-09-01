@@ -1,5 +1,6 @@
 from langchain_chroma import Chroma
-from langchain_huggingface.embeddings import HuggingFaceEmbeddings
+
+# from langchain_huggingface.embeddings import HuggingFaceEmbeddings
 from langchain_ollama.embeddings import OllamaEmbeddings
 from typing import List
 from ..config import settings
